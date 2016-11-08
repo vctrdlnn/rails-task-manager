@@ -1,2 +1,13 @@
-<h1>Tasks#show</h1>
-<p>Find me in app/views/tasks/show.html.erb</p>
+<h1>TO DO !</h1>
+<p><strong>
+  <%= "Title: #{@task.content}" %>
+</strong></p>
+<p>
+  <%= "due: #{@task.due_date} - author: #{@task.author}" %>
+</p>
+<p><em>
+  <%= @task.completed ? "ALREADY completed" : "NOT completed" %>
+</em></p>
+
+<%= link_to "All tasks", tasks_path %> -
+<%= link_to "Edit task", task_path(@task), method: :patch %>
